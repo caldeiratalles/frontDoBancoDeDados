@@ -1,0 +1,44 @@
+.container-cliente{
+    position: relative;
+    width:640px;
+    margin: 0 auto;
+    background-color: floralwhite;
+}
+
+
+form{
+    position: relative;
+    align-items: center;
+    text-transform: capitalize;
+    color: rgb(46, 45, 46);
+    font-size: 16px;
+    text-decoration: none;
+    margin-left: 208px; 
+    display: flex;
+    grid-template-areas:
+      "container--labels container--inputs";
+    margin: 0;
+    padding: 0;
+}
+.container--labels{
+    margin-top: 15px;
+    flex: 50%;
+    width: 320px;
+    height: 405px;
+    display: grid;
+}
+.container--inputs{
+    margin-top: 15px;
+    flex: 50%;
+    display: grid;
+}
+.container--labels button{
+    width: 320px;
+    height: 27px;  
+    
+}
+.container--labels label{
+    width: 320px;
+    height: 27px;  
+    
+}
