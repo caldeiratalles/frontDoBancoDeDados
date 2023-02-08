@@ -74,6 +74,25 @@ function CreateDonation(){
         setCreateDonation({ ...createDonation, imagem: base64 });
     };
 
+    const options = [
+        {value: 0, text: '--Choose an option--'},
+        {value: 1, text: 'Processador AMD'},
+        {value: 2, text: 'Processador Intel'},
+        {value: 3, text: 'Placa mãe AMD'},
+        {value: 4, text: 'Placa mãe INTEL'},
+        {value: 5, text: 'Memoria DDR4 4 GB'},
+        {value: 6, text: 'Memoria DDR4 8 GB'},
+        {value: 7, text: 'Memoria DDR4 16 GB'},
+        {value: 8, text: 'HD'},
+        {value: 9, text: 'SSD'},
+    ];
+
+    const [selected, setSelected] = useState(options[0].value);
+
+    const handleChanges = event => {
+        setSelected(event.target.value);
+        setCreateDonation({...createDonation, td_categoria_id_categoria_item: event.target.value})
+    };
         
 
         
@@ -131,18 +150,14 @@ function CreateDonation(){
                                   onChange={e => handleFileUpload(e)}
                               />
                               <label>Categoria:</label>
-                              <select id="td_categoria_id_categoria" value={createDonation.td_categoria_id_categoria} onChange={handleChange}>
-                                  <option value="1">Processador AMD</option>
-                                  <option value="2">Processador Intel</option>
-                                  <option value="3">Placa mãe AMD</option>
-                                  <option value="4">Placa mãe INTEL</option>
-                                  <option value="5">Memoria DDR4 4 GB</option>
-                                  <option value="6">Memoria DDR4 8 GB</option>
-                                  <option value="7">Memoria DDR4 16 GB</option>
-                                  <option value="8">HD</option>
-                                  <option value="9">SSD</option>
+                              <select id="td_categoria_id_categoria" value={selected} onChange={handleChanges}>
+                                  {options.map(option => (
+                                      <option key={option.value} value={option.value}>
+                                          {option.text}
+                                      </option>
+                                  ))}
                               </select>
-                              <button type="submit">Criar Doação</button>
+                              <button type="submit">Requisitar Doação</button>
                           </form>
                       </div>
                   </div>

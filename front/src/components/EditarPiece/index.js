@@ -54,7 +54,7 @@ function EditarPiece(){
             console.log(stockSimples);
             const response = await commom.put(`/stock/editar`, stockSimples);
             alert('Dados Atualizados');
-            navigation("/home")
+            navigation("/AllPiece")
         } catch (error) {
             alert('Erro no acesso a API');
         }
