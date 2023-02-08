@@ -6,8 +6,8 @@ function ToolBar(){
 
 
     return(    
-        <div className="container-tool" style={{display: "block"}}>
-            <div className="f1">
+        <div className="container-tool" style={{display: "inline-block"}}>
+            <div className="f1" style={{display: "inline-block"}}>
                 <Link to={`/home`}>Home</Link>
             </div>
             <div className="f2">

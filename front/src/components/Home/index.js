@@ -24,7 +24,6 @@ function Home(){
             </div>
             {/** Aqui nós vamos colocar texto, formularios, informações e etc...*/}
             <div className="corpo">
-                <h3>Testando o corpo</h3>
             </div>
             {/** O footer é sempre estático */}
             <div className="footer">
