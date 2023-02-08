@@ -43,7 +43,7 @@ function Login (handleListPessoa){
 
           <button className="btn btn-primary btn-block btn-large" onClick={handleLogin}>Logar</button>
 
-          <Link to={`/createUser`}>Criar Usuario</Link>
+          <Link style={{textDecoration: "none", color: "black"}} to={`/createUser`}>Criar Usuario</Link>
         </div>
       </div> 
     );

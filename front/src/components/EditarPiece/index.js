@@ -108,63 +108,56 @@ function EditarPiece(){
             <ToolBar />
             {/** O ToolBar vai ser estático sempre, pois nós vamos apenas criar os links das paginas*/}
             {/** Aqui nós vamos colocar texto, formularios, informações e etc...*/}
+            <form onSubmit={handleSubmit} style={{display: "inline-flex" , paddingTop:"10px"}}>
+                <div className="container--labels">
+                    <label htmlFor="lname">Item:</label>
+                    <br/>
+                    <label htmlFor="fname">Descricao:</label>
+                    <br/>
+                    <label htmlFor="lname">Quantidade em estoque:</label>
+                    <br/>
+                    <label htmlFor="lname">Imagem:</label>
+                    <br/>
+                    <label htmlFor="lname">Categoria:</label>
+                    <br/>
+                </div>
+                <div className="container--inputs" style={{display: "inline-block"}}>
+                    <input type="text" id="item" name="item" value={stockSimples.item} placeholder=""
+                           onChange={handleChange} required="required"/>
+                    <br/>
+                    <input type="text" id="descricao" name="descricao" value={stockSimples.descricao} placeholder=""
+                           onChange={handleChange} required="required"/>
+                    <br/>
+                    <input type="number" id="qtd_estoque" name="qtd_estoque" value={stockSimples.qtd_estoque} placeholder=""
+                           onChange={handleChange} required="required"/>
+                    <br/>
+                    <select id="td_categoria_id_categoria" value={stockSimples.td_categoria_id_categoria} onChange={handleChange}>
+                            <option value="1">Processador AMD</option>
+                            <option value="2">Processador Intel</option>
+                            <option value="3">Placa mãe AMD</option>
+                            <option value="4">Placa mãe INTEL</option>
+                            <option value="5">Memoria DDR4 4 GB</option>
+                            <option value="6">Memoria DDR4 8 GB</option>
+                            <option value="7">Memoria DDR4 16 GB</option>
+                            <option value="8">HD</option>
+                            <option value="9">SSD</option>
+                    </select>
+                    <br/>
+                    <input type="file" multiple accept="image/*" onChange={e => handleFileUpload(e)}/>
+                    <br/>
+                    <button className="btn btn-primary btn-lg ">
+                        Enviar Dados
+                    </button>
+                </div>
+
+            </form>
             <div className="corpo">
                 <div className="container--cliente">
-                    <p>
-                        1 Processador AMD
-                        <br/>
-                        2 Processador Intel
-                        <br/>
-                        3 Placa mãe AMD
-                        <br/>
-                        4 Placa mãe Intel
-                        <br/>
-                        5 Memoria DDR4 4 GB
-                        <br/>
-                        6 Memoria DDR4 8 GB
-                        <br/>
-                        7 Memoria DDR4 16 GB
-                        <br/>
-                        8 HD
-                        <br/>
-                        9 SSD
-                    </p>
-                    <form onSubmit={handleSubmit} style={{display: "block"}}>
-                        <div className="container--labels">
-                            <label htmlFor="lname">Item:</label>
-                            <br/>
-                            <label htmlFor="fname">Descricao:</label>
-                            <br/>
-                            <label htmlFor="lname">Quantidade em estoque:</label>
-                            <br/>
-                            <label htmlFor="lname">Imagem:</label>
-                        </div>
 
 
-                        <div className="container--inputs" style={{display: "block"}}>
-                            <input type="text" id="item" name="item" value={stockSimples.item} placeholder=""
-                                   onChange={handleChange} required="required"/>
-                            <br/>
-                            <input type="text" id="descricao" name="descricao" value={stockSimples.descricao} placeholder=""
-                                   onChange={handleChange} required="required"/>
-                            <br/>
-                            <input type="number" id="qtd_estoque" name="qtd_estoque" value={stockSimples.qtd_estoque} placeholder=""
-                                   onChange={handleChange} required="required"/>
-                            <br/>
-                            <input type="number" id="td_categoria_id_categoria" name="td_categoria_id_categoria"
-                                   value={stockSimples.td_categoria_id_categoria} placeholder="" onChange={handleChange}
-                                   required="required"/>
-                            <br/>
-                            <input type="file" multiple accept="image/*" onChange={e => handleFileUpload(e)}/>
-                            <br/>
-                            <button className="btn btn-primary btn-lg ">
-                                Enviar Dados
-                            </button>
-                        </div>
-
-                    </form>
 
                 </div>
+
             </div>
             <Footer />
         </div>

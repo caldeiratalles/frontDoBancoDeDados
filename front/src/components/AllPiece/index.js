@@ -17,10 +17,10 @@ function AllPiece(){
     const [reload, setReload] = useState(false)
 
     const editClientButton = (id) => (
-        <Link to={{
+        <Link  style={{textDecoration: "none", color: "black"}} to={{
                     pathname: `/editPiece/${id}`
                 }}>
-                    editar
+                    Editar
         </Link>
         );
 
@@ -91,7 +91,7 @@ function AllPiece(){
                             <button className="btn btn-primary btn-lg" onClick={() => (delete_peca(list.id_item))}>
                                 Deletar 
                             </button>
-                            <button className="btn btn-primary btn-lg">
+                            <button className="btn btn-primary btn-lg" >
                                 {editClientButton(list.id_item)}
                             </button>
                         </div>

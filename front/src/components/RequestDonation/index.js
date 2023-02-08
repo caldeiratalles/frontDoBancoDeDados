@@ -94,74 +94,56 @@ function CreateDonation(){
                   {/** O ToolBar vai ser estático sempre, pois nós vamos apenas criar os links das paginas*/}
                   {/** Aqui nós vamos colocar texto, formularios, informações e etc...*/}
                   <div className="corpo">
-                      <div className="container--cliente">
-                          <p>
-                              1 Processador AMD
-                              <br/>
-                              2 Processador Intel
-                              <br/>
-                              3 Placa mãe AMD
-                              <br/>
-                              4 Placa mãe Intel
-                              <br/>
-                              5 Memoria DDR4 4 GB
-                              <br/>
-                              6 Memoria DDR4 8 GB
-                              <br/>
-                              7 Memoria DDR4 16 GB
-                              <br/>
-                              8 HD
-                              <br/>
-                              9 SSD
-                          </p>
+                      <div className="container-cliente">
                           <form onSubmit={handleSubmit}>
-                              <div style={{ display: "block" }}>
-                                  <label>Item:</label>
-                                  <input
-                                      type="text"
-                                      name="item_item"
-                                      value={createDonation.item_item}
-                                      onChange={handleChange}
-                                  />
-                              </div>
-                              <div style={{ display: "block" }}>
-                                  <label>Descrição:</label>
-                                  <input
-                                      type="text"
-                                      name="descricao_item"
-                                      value={createDonation.descricao_item}
-                                      onChange={handleChange}
-                                  />
-                              </div>
-                              <div style={{ display: "block" }}>
-                                  <label>Quantidade de peça que você quer:</label>
-                                  <input
-                                      type="number"
-                                      name="qtd_estoque_item"
-                                      value={createDonation.qtd_doa}
-                                      onChange={handleChange}
-                                  />
-                              </div>
-                              <div style={{ display: "block" }}>
-                                  <label>Imagem:</label>
-                                  <input
-                                      type="file"
-                                      name="imagem_item"
-                                      onChange={e => handleFileUpload(e)}
-                                  />
-                              </div>
-                              <div style={{ display: "block" }}>
-                                  <label>Categoria:</label>
-                                  <input
-                                      type="number"
-                                      name="td_categoria_id_categoria_item"
-                                      value={createDonation.td_categoria_id_categoria_item}
-                                      onChange={handleChange}
-                                  />
-                              </div>
+
+                              <label>Item:</label>
+                              <input
+                                  type="text"
+                                  name="item_item"
+                                  value={createDonation.item_item}
+                                  onChange={handleChange}
+                              />
+
+
+                              <label>Descrição:</label>
+                              <input
+                                  type="text"
+                                  name="descricao_item"
+                                  value={createDonation.descricao_item}
+                                  onChange={handleChange}
+                              />
+
+
+                              <label>Quantidade para doação no Estoque:</label>
+                              <input
+                                  type="number"
+                                  name="qtd_estoque_item"
+                                  value={createDonation.qtd_estoque_item}
+                                  onChange={handleChange}
+                              />
+
+
+                              <label>Imagem:</label>
+                              <input
+                                  type="file"
+                                  name="imagem_item"
+                                  onChange={e => handleFileUpload(e)}
+                              />
+                              <label>Categoria:</label>
+                              <select id="td_categoria_id_categoria" value={createDonation.td_categoria_id_categoria} onChange={handleChange}>
+                                  <option value="1">Processador AMD</option>
+                                  <option value="2">Processador Intel</option>
+                                  <option value="3">Placa mãe AMD</option>
+                                  <option value="4">Placa mãe INTEL</option>
+                                  <option value="5">Memoria DDR4 4 GB</option>
+                                  <option value="6">Memoria DDR4 8 GB</option>
+                                  <option value="7">Memoria DDR4 16 GB</option>
+                                  <option value="8">HD</option>
+                                  <option value="9">SSD</option>
+                              </select>
                               <button type="submit">Criar Doação</button>
                           </form>
-
                       </div>
                   </div>
                   < Footer />
