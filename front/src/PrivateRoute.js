@@ -3,10 +3,10 @@ import {Navigate, Outlet, useLocation} from 'react-router-dom';
 
 const PrivateRoutes = (component) => {
     var username=localStorage.getItem("username");
-    var senha=localStorage.getItem("senha");
+    var senha = localStorage.getItem("senha");
 
     let location = useLocation();
-    if (username!=false){
+    if (username !== false){
         return <Outlet />;
     }
     return (
