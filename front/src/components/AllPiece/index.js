@@ -68,7 +68,7 @@ function AllPiece(){
                 </div>
                 {/** Aqui nós queremos deixar o crud sem ser estático pois criaremos funções de editar, excluir ...*/}
                 <div className="crud">
-                    <h3>BEM-VINDO AO ADMINISTRATIVO</h3>
+                    <h3>Todas peças disponíveis</h3>
                 </div>
                 {/** O ToolBar vai ser estático sempre, pois nós vamos apenas criar os links das paginas*/}
                 <div className="ToolBar">

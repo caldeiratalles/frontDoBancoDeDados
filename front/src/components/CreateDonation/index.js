@@ -86,7 +86,7 @@ function CreateDonation(){
                    * obs: Olhar as collections e olhar o componente section que vcs vão entender
                    */}
                   <div className="crud">
-                      <h3>task no componente criar cliente</h3>
+                      <h3>Criar doação para o sistema</h3>
                   </div>
                   {/** O ToolBar vai ser estático sempre, pois nós vamos apenas criar os links das paginas*/}
                   {/** Aqui nós vamos colocar texto, formularios, informações e etc...*/}

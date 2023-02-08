@@ -91,65 +91,79 @@ function EditarPiece(){
 
 
     return(
-        <div className="header-master">
-            <Header/>
-            <div className="container-cliente">
-                
-    
+        <div className="container">
+            {/** Aqui nós queremos apenas repetir o que está definido no componente header */}
+            <div className="logo">
+                <Header />
+            </div>
+            {/** Aqui nós queremos deixar o crud sem ser estático pois criaremos funções de editar, excluir ...,
+             * Tarefa: Modificar com os cruds corretos do criar cliente
+             * obs: Olhar as collections e olhar o componente section que vcs vão entender
+             */}
+            <div className="crud">
+                <h3>Editar peça</h3>
+            </div>
+            {/** O ToolBar vai ser estático sempre, pois nós vamos apenas criar os links das paginas*/}
+            {/** Aqui nós vamos colocar texto, formularios, informações e etc...*/}
+            <div className="corpo">
                 <div className="container--cliente">
-                <p>
-1	Processador AMD
-<br/>
-2	Processador Intel
-<br/>
-3	Placa mãe AMD
-<br/>
-4	Placa mãe Intel
-<br/>
-5	Memoria DDR4 4 GB
-<br/>
-6	Memoria DDR4 8 GB
-<br/>
-7	Memoria DDR4 16 GB
-<br/>
-8	HD
-<br/>
-9	SSD
-</p>
-                    <form onSubmit={handleSubmit} style={{ display: "block" }}>
+                    <p>
+                        1 Processador AMD
+                        <br/>
+                        2 Processador Intel
+                        <br/>
+                        3 Placa mãe AMD
+                        <br/>
+                        4 Placa mãe Intel
+                        <br/>
+                        5 Memoria DDR4 4 GB
+                        <br/>
+                        6 Memoria DDR4 8 GB
+                        <br/>
+                        7 Memoria DDR4 16 GB
+                        <br/>
+                        8 HD
+                        <br/>
+                        9 SSD
+                    </p>
+                    <form onSubmit={handleSubmit} style={{display: "block"}}>
                         <div className="container--labels">
-                            <label for="lname">Item:</label>
-                            <br />
-                            <label for="fname">Descricao:</label>
-                            <br />
-                            <label for="lname">Quantidade em estoque:</label>
-                            <br />
-                            <label for="lname">Imagem:</label>                        
+                            <label htmlFor="lname">Item:</label>
+                            <br/>
+                            <label htmlFor="fname">Descricao:</label>
+                            <br/>
+                            <label htmlFor="lname">Quantidade em estoque:</label>
+                            <br/>
+                            <label htmlFor="lname">Imagem:</label>
                         </div>
-                        
 
 
-
-                        <div className="container--inputs" style={{ display: "block" }}>
-                            <input type="text" id="item" name="item"  value={stockSimples.item} placeholder="" onChange={handleChange} required="required" />
-                            <br />
-                            <input type="text" id="descricao" name="descricao" value={stockSimples.descricao} placeholder="" onChange={handleChange}required="required"/>
-                            <br />
-                            <input type="number" id="qtd_estoque" name="qtd_estoque" value={stockSimples.qtd_estoque} placeholder="" onChange={handleChange}required="required"/>
-                            <br />
-                            <input type="number" id="td_categoria_id_categoria" name="td_categoria_id_categoria" value={stockSimples.td_categoria_id_categoria} placeholder="" onChange={handleChange}required="required"/>
-                            <br />
+                        <div className="container--inputs" style={{display: "block"}}>
+                            <input type="text" id="item" name="item" value={stockSimples.item} placeholder=""
+                                   onChange={handleChange} required="required"/>
+                            <br/>
+                            <input type="text" id="descricao" name="descricao" value={stockSimples.descricao} placeholder=""
+                                   onChange={handleChange} required="required"/>
+                            <br/>
+                            <input type="number" id="qtd_estoque" name="qtd_estoque" value={stockSimples.qtd_estoque} placeholder=""
+                                   onChange={handleChange} required="required"/>
+                            <br/>
+                            <input type="number" id="td_categoria_id_categoria" name="td_categoria_id_categoria"
+                                   value={stockSimples.td_categoria_id_categoria} placeholder="" onChange={handleChange}
+                                   required="required"/>
+                            <br/>
                             <input type="file" multiple accept="image/*" onChange={e => handleFileUpload(e)}/>
-                            <br />
+                            <br/>
                             <button className="btn btn-primary btn-lg ">
-                            Enviar Dados
+                                Enviar Dados
                             </button>
                         </div>
 
-                    </form> 
-    
+                    </form>
+
                 </div>
             </div>
+            {/** O footer é sempre estático */}
         </div>
         );
 

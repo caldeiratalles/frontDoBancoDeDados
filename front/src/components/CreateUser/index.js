@@ -94,12 +94,12 @@ function CreateUser(){
         <div className="logo">
             <Header />
         </div>
-        {/** Aqui nós queremos deixar o crud sem ser estático pois criaremos funções de editar, excluir ..., 
+        {/** Aqui nós queremos deixar o crud sem ser estático pois criaremos funções de editar, excluir ...,
          * Tarefa: Modificar com os cruds corretos do criar cliente
          * obs: Olhar as collections e olhar o componente section que vcs vão entender
         */}
         <div className="crud">
-            <h3>task no componente criar cliente</h3>
+            <h3>Criar Usuario</h3>
         </div>
         {/** O ToolBar vai ser estático sempre, pois nós vamos apenas criar os links das paginas*/}
         {/** Aqui nós vamos colocar texto, formularios, informações e etc...*/}
