@@ -85,6 +85,7 @@ function TrocandoSenha(){
       </div>
       {/** Aqui nós vamos colocar texto, formularios, informações e etc...*/}
       <div className="corpo">
+          <div className="container-cliente">
       <form onSubmit={handleSubmitDeletar}>
     <div style={{ display: "block" }}>
   <label htmlFor="username">Username:</label>
@@ -142,6 +143,7 @@ function TrocandoSenha(){
   </div>
   <button type="submit">Trocar senha de usuario</button>
 </form>
+      </div>
       </div>
       {/** O footer é sempre estático */}
       <div className="footer">
