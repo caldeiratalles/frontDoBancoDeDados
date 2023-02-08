@@ -1,5 +1,5 @@
 import React from 'react';
-import { Navigate, Route,useLocation,Outlet } from 'react-router-dom';
+import {Navigate, Outlet, useLocation} from 'react-router-dom';
 
 const PrivateRoutes = (component) => {
     var username=localStorage.getItem("username");

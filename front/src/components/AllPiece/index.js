@@ -1,6 +1,6 @@
-import React,{ useState, useEffect } from 'react';
+import React, {useEffect, useState} from 'react';
 import commom from '../../services/commom';
-import { Link,useNavigate } from 'react-router-dom';
+import {Link, useNavigate} from 'react-router-dom';
 import Header from '../Header';
 import ToolBar from '../ToolBar';
 import Footer from '../Footer';

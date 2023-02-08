@@ -1,11 +1,7 @@
-import React,{ useState, useEffect } from 'react';
+import React, {useEffect, useState} from 'react';
 import commom from '../../services/commom';
-import { useParams } from 'react-router-dom';
-import viacep from '../../services/viacep';
+import {useNavigate, useParams} from 'react-router-dom';
 import Header from '../Header';
-import InputMask from "react-input-mask";
-import { useForm } from "react-hook-form";
-import { useNavigate } from "react-router-dom";
 import './index.css';
 
 

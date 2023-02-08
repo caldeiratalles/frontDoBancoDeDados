@@ -1,8 +1,4 @@
-
-
 import './index.css';
-
-
 
 
 function Header(handleListPessoa){

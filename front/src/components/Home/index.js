@@ -1,10 +1,8 @@
-
 import './index.css';
 
 import Header from '../Header';
 import ToolBar from '../ToolBar';
 import Footer from '../Footer';
-
 
 
 function Home(){

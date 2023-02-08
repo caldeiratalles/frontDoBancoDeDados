@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route} from 'react-router-dom';
+import {Route, Routes} from 'react-router-dom';
 import AllPiece from './components/AllPiece';
 import Home from './components/Home';
 import CreateUser from './components/CreateUser';
@@ -6,20 +6,9 @@ import TrocandoSenha from './components/TrocandoSenha';
 import Login from './components/Login'
 import CreateDonation from './components/CreateDonation'
 import EditarPiece from './components/EditarPiece'
-import Header from './components/Header';
 import PrivateRoutes from './PrivateRoute';
 import RequestDonation from './components/RequestDonation';
-import {
-    Link,
-    useNavigate,
-    useLocation,
-    Navigate,
-    Outlet,
-    // Redirect,
-  } from 'react-router-dom';
 import * as React from 'react';
-
-
 
 
 const RoutesConfig = () => {

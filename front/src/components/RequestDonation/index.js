@@ -1,20 +1,8 @@
-import React,{ useState, useEffect } from 'react';
+import React, {useState} from 'react';
 import common from '../../services/commom';
-import viacep from '../../services/viacep';
 import './index.css';
-import InputMask from "react-input-mask";
-import Header from '../Header';
-import ToolBar from '../ToolBar';
-import Footer from '../Footer';
 
-import {
-    Link,
-    useNavigate,
-    useLocation,
-    Navigate,
-    Outlet,
-    // Redirect,
-  } from 'react-router-dom';
+import {useNavigate,} from 'react-router-dom';
 
 function CreateDonation(){
     const navigation = useNavigate();
