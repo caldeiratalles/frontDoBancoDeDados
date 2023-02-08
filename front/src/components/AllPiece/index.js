@@ -29,7 +29,7 @@ function AllPiece(){
 
         try {
             console.log(login);
-            const response = await commom.get('/stock/allPiece');
+            const response = await commom.get('http://back-endserver-production.up.railway.app/stock/allPiece');
             const list = response.data;
 
             setStockSimple(list);
