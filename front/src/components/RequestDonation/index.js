@@ -148,25 +148,6 @@ function CreateDonation(){
                                   />
                               </div>
                               <div style={{ display: "block" }}>
-                                  <p>
-                                      1	Processador AMD
-                                      <br/>
-                                      2	Processador Intel
-                                      <br/>
-                                      3	Placa mãe AMD
-                                      <br/>
-                                      4	Placa mãe Intel
-                                      <br/>
-                                      5	Memoria DDR4 4 GB
-                                      <br/>
-                                      6	Memoria DDR4 8 GB
-                                      <br/>
-                                      7	Memoria DDR4 16 GB
-                                      <br/>
-                                      8	HD
-                                      <br/>
-                                      9	SSD
-                                  </p>
                                   <label>Categoria:</label>
                                   <input
                                       type="number"
