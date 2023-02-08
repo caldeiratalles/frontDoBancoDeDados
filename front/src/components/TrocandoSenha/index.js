@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import common from '../../services/commom';
 import {useNavigate, useParams} from 'react-router-dom';
-import './index.css';
+import './TrocandoSenha.css';
 import Header from '../Header';
 import ToolBar from '../ToolBar';
 import Footer from '../Footer';

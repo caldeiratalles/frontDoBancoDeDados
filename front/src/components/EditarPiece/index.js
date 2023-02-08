@@ -2,7 +2,7 @@ import React, {useEffect, useState} from 'react';
 import commom from '../../services/commom';
 import {useNavigate, useParams} from 'react-router-dom';
 import Header from '../Header';
-import './index.css';
+import './EditarPiece.css';
 
 
 function EditarPiece(){

@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import common from '../../services/commom';
 import viacep from '../../services/viacep';
-import './index.css';
+import './CreateUser.css';
 import Header from '../Header';
 
 import {useNavigate,} from 'react-router-dom';

@@ -1,4 +1,4 @@
-import './index.css';
+import './Header.css';
 
 
 function Header(handleListPessoa){

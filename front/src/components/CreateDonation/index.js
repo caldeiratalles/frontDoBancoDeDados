@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import common from '../../services/commom';
-import './index.css';
+import './CreateDonation.css';
 
 import {useNavigate,} from 'react-router-dom';
 

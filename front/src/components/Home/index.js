@@ -1,4 +1,4 @@
-import './index.css';
+import './Home.css';
 
 import Header from '../Header';
 import ToolBar from '../ToolBar';
