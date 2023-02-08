@@ -14,12 +14,12 @@ function CreateUser(){
     const [userCreator, setUserCreator] = useState({
         username: "",
         senha: "",
-        tipoUsuario: "",
+        tipoUsuario: 2,
         nome: "",
         cpfCnpj: "",
         sexo: "",
         email: "",
-        tipoEmail: "",
+        tipoEmail: 1,
         telefone: "",
         tipoTelefone: "",
         cep: "",
@@ -121,12 +121,6 @@ function CreateUser(){
                 id="senha"
                 value={userCreator.senha}
                 onChange={handleChange}/>
-              <label htmlFor="tipoUsuario">Tipo de usuário:</label>
-              <input type="number"
-                name="tipoUsuario"
-                id="tipoUsuario"
-                value={userCreator.tipoUsuario = 2}
-                onChange={handleChange}/>
               <label htmlFor="nome">Nome:</label>
               <input type="text"
                 name="nome"
@@ -150,12 +144,6 @@ function CreateUser(){
                 name="email"
                 id="email"
                 value={userCreator.email}
-                onChange={handleChange}/>
-              <label htmlFor="tipoEmail">Tipo de Email:</label>
-              <input type="number"
-                name="tipoEmail"
-                id="tipoEmail"
-                value={userCreator.tipoEmail=2}
                 onChange={handleChange}/>
               <label htmlFor="telefone">Telefone:</label>
               <input type="text"
@@ -210,12 +198,6 @@ function CreateUser(){
                 name="estado"
                 id="estado"
                 value={userCreator.estado}
-                onChange={handleChange}/>
-              <label htmlFor="tipoEmail">Tipo de Email:</label>
-              <input type="text"
-                name="tipoEmail"
-                id="tipoEmail"
-                value={userCreator.tipoEmail=1}
                 onChange={handleChange}/>
               <button className="btn btn-primary btn-lg" onClick={handleListEndereco}>
                 Pesquisar CEP
