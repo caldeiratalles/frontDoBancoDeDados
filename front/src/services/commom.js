@@ -7,7 +7,7 @@ import axios from 'axios';
     }
 });*/}
 const commom = axios.create({
-    baseURL: "http://back-endserver-production.up.railway.app"
+    baseURL: "https://back-endserver-production.up.railway.app"
   });
   commom.interceptors.request.use(async config => {
     const token = localStorage.getItem("token");
