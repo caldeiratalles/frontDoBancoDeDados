@@ -19,9 +19,9 @@ const RoutesConfig = () => {
                 <Route element={<PrivateRoutes />}>
                     <Route exact path="/allPiece" element={ <AllPiece /> }/>
                     <Route exact path="/createDonation" element={ <CreateDonation /> }/>
-                    <Route exact path="/editarPiece/:id" element={ <EditarPiece /> }/>
+                    <Route exact path="/editPiece/:id" element={ <EditarPiece /> }/>
                     <Route exact path="/requestDonation" element={<RequestDonation />}/>
-                    <Route exact path="/trocandoSenha" element={ <TrocandoSenha /> }/>
+                    <Route exact path="/changePassword" element={ <TrocandoSenha /> }/>
                 </Route>
                 <Route exact path="/home" element={ <Home /> }/>
                 {/*<Route exact path="/home" element={ <Home /> }/>

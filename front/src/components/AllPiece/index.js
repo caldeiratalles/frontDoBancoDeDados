@@ -18,7 +18,7 @@ function AllPiece(){
 
     const editClientButton = (id) => (
         <Link to={{
-                    pathname: `/editarPiece/${id}`
+                    pathname: `/editPiece/${id}`
                 }}>
                     editar
         </Link>
