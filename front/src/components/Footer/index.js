@@ -4,7 +4,7 @@
 function Footer(){
     return(
         <div className="container-footer">
-            <h3>footer</h3>
+            <h3>HelpDelivery</h3>
         </div>
     );
 }
