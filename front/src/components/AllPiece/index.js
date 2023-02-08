@@ -2,6 +2,9 @@ import React,{ useState, useEffect } from 'react';
 import commom from '../../services/commom';
 import { Link,useNavigate } from 'react-router-dom';
 import Header from '../Header';
+import ToolBar from '../ToolBar';
+import Footer from '../Footer';
+import "../AllPiece/indexAllPiece.css";
 
 function AllPiece(){
     //use state sempre no inicio
@@ -57,32 +60,56 @@ function AllPiece(){
     };
 
 
-    
-    return(
-        <div className="container--section">
-            {stockSimples.map(list => {
+        return(   
+            <div className="container">
+                {/** Aqui nós queremos apenas repetir o que está definido no componente header */}
+                <div className="logo">
+                    <Header />
+                </div>
+                {/** Aqui nós queremos deixar o crud sem ser estático pois criaremos funções de editar, excluir ...*/}
+                <div className="crud">
+                    <h3>BEM-VINDO AO ADMINISTRATIVO</h3>
+                </div>
+                {/** O ToolBar vai ser estático sempre, pois nós vamos apenas criar os links das paginas*/}
+                <div className="ToolBar">
+                    <ToolBar />
+                </div>
+                {/** Aqui nós vamos colocar texto, formularios, informações e etc...*/}
+                <div className="corpo">
+                <div className="container--section">
+                {stockSimples.map(list => {
                 return (
-                    <div key={list.id_item}>
-                        <hr/>
-                        <p>Item: {list?.item}</p>
-                        <p>Descricao: {list?.descricao}</p>
-                        <p>Quantidade em estoque: {list?.qtd_estoque}</p>
-                        <img src={list?.imagem} alt="Red dot" />
-                        <p>Categoria: {list?.td_categoria_id_categoria}</p>
-                        <hr/>
-                        <button className="btn btn-primary btn-lg" onClick={() => (delete_peca(list.id_item))}>
-                            Deletar 
-                        </button>
-                        <button className="btn btn-primary btn-lg">
-                        {editClientButton(list.id_item)}
-                        </button>
-                        <br/>
+                    <div key={list.id_item} className="stock-item">
+                        <hr className="item-hr"/>
+                        <p className="item-title">Item: {list?.item}</p>
+                        <p className="item-desc">Descricao: {list?.descricao}</p>
+                        <p className="item-qty">Quantidade em estoque: {list?.qtd_estoque}</p>
+                        <img src={list?.imagem} alt="Red dot" className="item-img"/>
+                        <p className="item-cat">Categoria: {list?.td_categoria_id_categoria}</p>
+                        <hr className="item-hr"/>
+                        <div className="item-btns">
+                            <button className="btn btn-primary btn-lg" onClick={() => (delete_peca(list.id_item))}>
+                                Deletar 
+                            </button>
+                            <button className="btn btn-primary btn-lg">
+                                {editClientButton(list.id_item)}
+                            </button>
+                        </div>
+                        <br />
                     </div>
                 )
             })}
-        </div>
-    )
 
+        </div>
+                </div>
+                {/** O footer é sempre estático */}
+                <div className="footer">
+                    <Footer />
+                </div>
+            </div>
+                
+                
+        );
 }
 
 export default AllPiece;

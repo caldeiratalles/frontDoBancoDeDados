@@ -118,11 +118,8 @@ function CreateUser(){
             {/** Aqui nós vamos colocar texto, formularios, informações e etc...*/}
             <div className="corpo">
                 <div className="container--cliente">
-                <button className="btn btn-primary btn-lg" onClick={handleListEndereco}>
-                            Pesquisar CEP
-                            </button>
                     <form onSubmit={handleSubmit}>
-        <div style={{ display: "block" }}>
+        <div >
       <label htmlFor="username">Username:</label>
       <input
         type="text"
@@ -132,8 +129,7 @@ function CreateUser(){
         onChange={handleChange}
       />
       </div>
-      <br />
-      <div style={{ display: "block" }}>
+      <div >
       <label htmlFor="senha">Senha:</label>
       <input
         type="password"
@@ -143,7 +139,6 @@ function CreateUser(){
         onChange={handleChange}
       />
       </div>
-      <br />
       <div style={{ display: "none" }}>
       <label htmlFor="tipoUsuario">Tipo de usuário:</label>
       <input
@@ -154,8 +149,7 @@ function CreateUser(){
         onChange={handleChange}
       />
       </div>
-      <br />
-      <div style={{ display: "block" }}>
+      <div >
       <label htmlFor="nome">Nome:</label>
       <input
         type="text"
@@ -165,8 +159,7 @@ function CreateUser(){
         onChange={handleChange}
       />
       </div>
-      <div style={{ display: "block" }}>
-      <br />
+      <div >
       <label htmlFor="cpfCnpj">CPF/CNPJ:</label>
       <input
         type="text"
@@ -176,8 +169,7 @@ function CreateUser(){
         onChange={handleChange}
       />
       </div>
-      <br />
-      <div style={{ display: "block" }}>
+      <div >
       <label htmlFor="sexo">Sexo(1 Masculino, 2 Feminino ou 3 outros):</label>
       <input
         type="number"
@@ -187,8 +179,7 @@ function CreateUser(){
         onChange={handleChange}
       />
       </div>
-      <br />
-      <div style={{ display: "block" }}>
+      <div >
       <label htmlFor="email">Email:</label>
       <input
         type="email"
@@ -198,7 +189,6 @@ function CreateUser(){
         onChange={handleChange}
         />
         </div>
-        <br />
         <div style={{ display: "none" }}>
       <label htmlFor="tipoEmail">Tipo de Email:</label>
       <input
@@ -209,8 +199,7 @@ function CreateUser(){
         onChange={handleChange}
       />
       </div>
-      <br />
-      <div style={{ display: "block" }}>
+      <div >
       <label htmlFor="telefone">Telefone:</label>
       <input
         type="text"
@@ -220,8 +209,7 @@ function CreateUser(){
         onChange={handleChange}
       />
       </div>
-      <br />
-      <div style={{ display: "block" }}>
+      <div >
       <label htmlFor="tipoTelefone">Tipo de Telefone(1 fixo ou 2 movel):</label>
       <input
         type="number"
@@ -231,8 +219,7 @@ function CreateUser(){
         onChange={handleChange}
       />
       </div>
-      <br />
-      <div style={{ display: "block" }}>
+      <div >
       <label htmlFor="cep">CEP:</label>
       <input
         type="text"
@@ -242,8 +229,7 @@ function CreateUser(){
         onChange={handleChange}
       />
       </div>
-      <br />
-      <div style={{ display: "block" }}>
+      <div >
       <label htmlFor="numeroEndereco">Número do Endereço:</label>
       <input
         type="text"
@@ -253,8 +239,7 @@ function CreateUser(){
         onChange={handleChange}
       />
       </div>
-      <br />
-      <div style={{ display: "block" }}>
+      <div >
       <label htmlFor="complementoEndereco">Complemento do Endereço:</label>
       <input
         type="text"
@@ -264,8 +249,7 @@ function CreateUser(){
         onChange={handleChange}
       />
       </div>
-      <br />
-      <div style={{ display: "block" }}>
+      <div >
       <label htmlFor="logradouro">Logradouro:</label>
       <input
         type="text"
@@ -275,8 +259,7 @@ function CreateUser(){
         onChange={handleChange}
       />
       </div>
-      <br />
-      <div style={{ display: "block" }}>
+      <div >
       <label htmlFor="bairro">Bairro:</label>
       <input
         type="text"
@@ -286,8 +269,7 @@ function CreateUser(){
         onChange={handleChange}
       />
       </div>
-      <br />
-      <div style={{ display: "block" }}>
+      <div >
       <label htmlFor="cidade">Cidade:</label>
       <input
         type="text"
@@ -297,8 +279,7 @@ function CreateUser(){
         onChange={handleChange}
       />
       </div>
-      <br />
-      <div style={{ display: "block" }}>
+      <div >
       <label htmlFor="estado">Estado:</label>
       <input
         type="text"
@@ -308,7 +289,6 @@ function CreateUser(){
         onChange={handleChange}
       />
       </div>
-      <br />
       <div style={{ display: "none" }}>
       <label htmlFor="tipoEmail">Tipo de Email:</label>
       <input
@@ -319,8 +299,10 @@ function CreateUser(){
         onChange={handleChange}
       />
       </div>
-      <br />
       <button type="submit">Criar Usuário</button>
+      <button className="btn btn-primary btn-lg" onClick={handleListEndereco}>
+                            Pesquisar CEP
+                            </button>
     </form>
                     </div>
                 </div>
