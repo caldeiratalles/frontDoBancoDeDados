@@ -86,7 +86,7 @@ function CreateDonation(){
                    * obs: Olhar as collections e olhar o componente section que vcs vão entender
                    */}
                   <div className="crud">
-                      <h3>Editar peça</h3>
+                      <h3>Requisitar doação</h3>
                   </div>
                   {/** O ToolBar vai ser estático sempre, pois nós vamos apenas criar os links das paginas*/}
                   {/** Aqui nós vamos colocar texto, formularios, informações e etc...*/}
