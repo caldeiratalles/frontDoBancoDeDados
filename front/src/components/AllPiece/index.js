@@ -13,6 +13,11 @@ function AllPiece(){
         username:localStorage.getItem("username"),
         senha:localStorage.getItem("senha")})
 
+    const [loginAdmins, setAdminLogin] = useState({
+        username:"",
+        senha:""
+    });
+
     const [stockSimples, setStockSimple] = useState([])
     const [reload, setReload] = useState(false)
 
@@ -51,8 +56,7 @@ function AllPiece(){
         try {
             //(path,body(tem que explicitar que está enviando um tipo de data),config) => axios
             const response = await commom.delete(`/stock/delete/${id_item}`);
-            navigation("/home");
-            
+            handleListStock()
             console.log();
         } catch (error) {
             alert('Erro no acesso a API');
@@ -88,12 +92,14 @@ function AllPiece(){
                         <p className="item-cat">Categoria: {list?.td_categoria_id_categoria}</p>
                         <hr className="item-hr"/>
                         <div className="item-btns">
-                            <button className="btn btn-primary btn-lg" onClick={() => (delete_peca(list.id_item))}>
-                                Deletar 
-                            </button>
                             <button className="btn btn-primary btn-lg" >
                                 {editClientButton(list.id_item)}
                             </button>
+                            { login.username === "Talles" &&
+                                <button className="btn btn-primary btn-lg" onClick={() => (delete_peca(list.id_item))}>
+                                    Deletar
+                                </button>
+                            }
                         </div>
                         <br />
                     </div>
