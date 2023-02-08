@@ -1,0 +1,6 @@
+.container-cliente form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: .75rem;
+    row-gap: 1.25rem;
+}
