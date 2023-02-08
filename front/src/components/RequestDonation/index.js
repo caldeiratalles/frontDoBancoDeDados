@@ -4,6 +4,8 @@ import './RequestDonation.css';
 
 import {useNavigate,} from 'react-router-dom';
 import Header from "../Header";
+import ToolBar from "../ToolBar";
+import Footer from "../Footer";
 
 function CreateDonation(){
     const navigation = useNavigate();
@@ -88,6 +90,7 @@ function CreateDonation(){
                   <div className="crud">
                       <h3>Requisitar doação</h3>
                   </div>
+                  <ToolBar />
                   {/** O ToolBar vai ser estático sempre, pois nós vamos apenas criar os links das paginas*/}
                   {/** Aqui nós vamos colocar texto, formularios, informações e etc...*/}
                   <div className="corpo">
@@ -161,7 +164,7 @@ function CreateDonation(){
 
                       </div>
                   </div>
-                  {/** O footer é sempre estático */}
+                  < Footer />
               </div>
 
               

@@ -5,6 +5,8 @@ import './CreateUser.css';
 import Header from '../Header';
 
 import {useNavigate,} from 'react-router-dom';
+import ToolBar from "../ToolBar";
+import Footer from "../Footer";
 
 
 function CreateUser(){
@@ -101,6 +103,7 @@ function CreateUser(){
         <div className="crud">
             <h3>Criar Usuario</h3>
         </div>
+          <ToolBar />
         {/** O ToolBar vai ser estático sempre, pois nós vamos apenas criar os links das paginas*/}
         {/** Aqui nós vamos colocar texto, formularios, informações e etc...*/}
         <div className="corpo">
@@ -221,7 +224,7 @@ function CreateUser(){
             </form>
           </div>
         </div>
-        {/** O footer é sempre estático */}
+        <Footer />
       </div>
     );
 }

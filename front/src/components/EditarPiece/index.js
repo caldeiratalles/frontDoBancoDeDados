@@ -3,6 +3,8 @@ import commom from '../../services/commom';
 import {useNavigate, useParams} from 'react-router-dom';
 import Header from '../Header';
 import './EditarPiece.css';
+import ToolBar from "../ToolBar";
+import Footer from "../Footer";
 
 
 function EditarPiece(){
@@ -103,6 +105,7 @@ function EditarPiece(){
             <div className="crud">
                 <h3>Editar peça</h3>
             </div>
+            <ToolBar />
             {/** O ToolBar vai ser estático sempre, pois nós vamos apenas criar os links das paginas*/}
             {/** Aqui nós vamos colocar texto, formularios, informações e etc...*/}
             <div className="corpo">
@@ -163,7 +166,7 @@ function EditarPiece(){
 
                 </div>
             </div>
-            {/** O footer é sempre estático */}
+            <Footer />
         </div>
         );
 
