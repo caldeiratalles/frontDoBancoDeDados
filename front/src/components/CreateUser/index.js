@@ -107,7 +107,11 @@ function CreateUser(){
         {/** O ToolBar vai ser estático sempre, pois nós vamos apenas criar os links das paginas*/}
         {/** Aqui nós vamos colocar texto, formularios, informações e etc...*/}
         <div className="corpo">
+
           <div className="container-cliente">
+              <button className="btn btn-primary btn-lg" onClick={handleListEndereco}>
+                  Pesquisar CEP
+              </button>
             <form onSubmit={handleSubmit}>
               <label htmlFor="username">Username:</label>
               <input type="text"
@@ -199,11 +203,9 @@ function CreateUser(){
                 id="estado"
                 value={userCreator.estado}
                 onChange={handleChange}/>
-              <button className="btn btn-primary btn-lg" onClick={handleListEndereco}>
-                Pesquisar CEP
-              </button>
               <button type="submit">Criar Usuário</button>
             </form>
+
           </div>
         </div>
         <Footer />
